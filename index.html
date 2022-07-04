@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Sunnyside agency landing page</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header-bg">
+      <nav class="navbar">
+        <img class="logo" src="images/logo.svg" />
+        <ul class="nav-menu">
+          <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Projects</a></li>
+          <li class="nav-item"><button class="btn">CONTACT</button></li>
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+
+      <h1>WE ARE CREATIVES</h1>
+      <div class="arrow"></div>
+    </header>
+    <main>
+      <div class="main-grid-container">
+        <div class="egg-img">
+          <picture>
+            <source
+              srcset="images/mobile/image-transform.jpg"
+              media="(max-width:700px)"
+            />
+            <source
+              srcset="images/desktop/image-transform.jpg"
+              media="(min-width:700px)"
+            />
+            <img src="images/mobile/image-transform.jpg" alt="Flowers" />
+          </picture>
+        </div>
+        <div class="content-container order">
+          <h2>Transform your <br />brand</h2>
+          <p>
+            We are a full-service creative agency specializing in helping brands
+            grow fast. Engage your clients through compelling visuals that do
+            most of the marketing for you
+          </p>
+
+          <div class="line-contanier">
+            <a href="#">LEARN MORE</a>
+            <div class="line line-color"></div>
+          </div>
+        </div>
+
+        <div class="pink-img">
+          <picture>
+            <source
+              srcset="images/mobile/image-stand-out.jpg"
+              media="(max-width:700px)"
+            />
+            <source
+              srcset="images/desktop/image-stand-out.jpg"
+              media="(min-width:700px)"
+            />
+            <img src="images/mobile/image-stand-out.jpg" alt="Flowers" />
+          </picture>
+        </div>
+        <div class="content-container">
+          <h2>Stand out to the right audience</h2>
+          <p>
+            Using a collaborative formula of designers, researchers,
+            photographers, videographers, and copywriters, we’ll build and
+            extend your brand in digital places.
+          </p>
+
+          <div>
+            <a href="#">learn more </a>
+          </div>
+        </div>
+        <div class="box-5 image-text-box">
+          <div class="text-container">
+            <h3>Graphic Design</h3>
+            <p>
+              Great design makes you memorable. We deliver artwork that
+              underscores your brand message and captures potential clients’
+              attention.
+            </p>
+          </div>
+        </div>
+        <div class="box-6 image-text-box">
+          <div class="text-container color">
+            <h3>Photography</h3>
+            <p>
+              Increase your credibility by getting the most stunning,
+              high-quality photos that improve your business image.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <section class="testimonial-container">
+        <h4>CLINET TESTIMONIALS</h4>
+        <div class="testimonial-grid">
+          <article>
+            <img class="avatar" src="images/image-emily.jpg" />
+            <p>
+              We put our trust in Sunnyside and they delivered, making sure our
+              needs were met and deadlines were always hit.
+            </p>
+            <h3>Emily R.</h3>
+            <small>Marketing Director</small>
+          </article>
+
+          <article>
+            <img class="avatar" src="images/image-thomas.jpg" />
+            <p class="padding">
+              Sunnyside’s enthusiasm coupled with their keen interest in our
+              brand’s success made it a satisfying and enjoyable experience.
+            </p>
+            <h3>Thomas S.</h3>
+            <small>Chief Operating Officer</small>
+          </article>
+          <article>
+            <img class="avatar" src="images/image-jennie.jpg" />
+            <p>
+              Incredible end result! Our sales increased over 400% when we
+              worked with Sunnyside. Highly recommended!
+            </p>
+            <h3>Jennie F.</h3>
+            <small>Business Owner</small>
+          </article>
+        </div>
+      </section>
+      <section class="img-grid">
+        <picture>
+          <source
+            srcset="images/mobile/image-gallery-milkbottles.jpg"
+            media="(max-width:700px)"
+          />
+          <source
+            srcset="images/desktop/image-gallery-milkbottles.jpg"
+            media="(min-width:700px)"
+          />
+          <img
+            src="images/mobile/image-gallery-milkbottles.jpg"
+            alt="Flowers"
+          />
+        </picture>
+
+        <picture>
+          <source
+            srcset="images/mobile/image-gallery-orange.jpg"
+            media="(max-width:700px)"
+          />
+          <source
+            srcset="images/desktop/image-gallery-orange.jpg"
+            media="(min-width:700px)"
+          />
+          <img src="images/mobile/image-gallery-orange.jpg" alt="Flowers" />
+        </picture>
+
+        <picture>
+          <source
+            srcset="images/mobile/image-gallery-cone.jpg"
+            media="(max-width:700px)"
+          />
+          <source
+            srcset="images/desktop/image-gallery-cone.jpg"
+            media="(min-width:700px)"
+          />
+          <img src="images/mobile/image-gallery-cone.jpg" alt="Flowers" />
+        </picture>
+
+        <picture>
+          <source
+            srcset="images/mobile/image-gallery-sugar-cubes.jpg"
+            media="(max-width:700px)"
+          />
+          <source
+            srcset="images\desktop\image-gallery-sugarcubes.jpg"
+            media="(min-width:700px)"
+          />
+          <img src="images/mobile/image-gallery-sugar-cubes.jpg" />
+        </picture>
+      </section>
+    </main>
+
+    <footer class="footer-container">
+      <img class="footer-logo" src="images/logo.svg" />
+      <ul class="footer-list-container">
+        <li>About</li>
+        <li>Services</li>
+        <li>Projects</li>
+      </ul>
+      <div class="social-media">
+        <img src="images/icon-facebook.svg" />
+        <img src="images/icon-instagram.svg" />
+        <img src="images/icon-twitter.svg" />
+        <img src="images/icon-pinterest.svg" />
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
