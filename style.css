@@ -7,8 +7,8 @@
 
   --Soft-red: hsla(7, 99%, 70%, 0.359);
   --Soft-Yellow: hsla(51, 100%, 49%, 0.359);
-  --red: hsla(7, 99%, 70%, 0.781);
-  --Yellow: hsl(51, 100%, 49%);
+  --red: hsla(7, 99%, 70%, 0.847);
+  --Yellow: hsla(51, 100%, 49%, 0.853);
   --Dark-desaturated-cyan-graphic-design-text: #25564b;
   --Dark-blue-photography-text: #19536b;
   --Dark-moderate-cyan-footer: #458c7e;
@@ -41,14 +41,11 @@ body {
   font-family: var(--ff-fraunces);
   background-color: var(--White);
 }
+/* =========header background========= */
 header {
   width: 100%;
   height: 100vh;
   text-align: center;
-}
-main {
-  width: 83%;
-  margin: 0px auto;
 }
 .header-bg {
   background-image: url(images/desktop/image-header.jpg);
@@ -58,16 +55,63 @@ main {
   width: 100%;
   height: 800px;
 }
-nav {
+/* ================Navbar============ */
+
+.navbar {
+  min-height: 70px;
+  padding: 38px 45px;
   display: flex;
   justify-content: space-between;
-  width: 100%;
-  padding: 38px 45px;
+  align-items: center;
 }
-img {
+.logo {
+  max-width: 170px;
+  object-fit: contain;
+}
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+.nav-link {
+  font-family: var(--ff-barlow);
+  color: var(--White);
+  cursor: pointer;
+}
+.btn {
+  background-color: #ffffff;
+  font-family: var(--ff-fraunces);
+  padding: 15px 25px;
+  border: none;
+  border-radius: 30px;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.348);
+  color: var(--White);
+}
+.bar {
   display: block;
-  width: 100%;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: white;
 }
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+/* ==============main width========== */
+main {
+  width: 83%;
+  margin: 0px auto;
+}
+
+/* =============h1 and Arrow=========== */
 h1 {
   word-spacing: 5px;
   padding-top: 3.5%;
@@ -77,6 +121,30 @@ h1 {
   font-size: 3.7rem;
   letter-spacing: 7px;
   color: var(--White);
+}
+.arrow {
+  background-image: url(images/icon-arrow-down.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 120px;
+}
+/* ===============Main Grid============ */
+.main-grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+/* ==============Main context=========== */
+img {
+  display: block;
+  width: 100%;
+}
+.content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 62%;
+  margin: 0 auto;
 }
 p {
   font-family: var(--ff-barlow);
@@ -104,58 +172,98 @@ small {
   font-size: 0.87rem;
   font-family: var(--ff-barlow);
 }
-h4 {
-  letter-spacing: 4.5px;
-  font-size: 1rem;
-  margin-bottom: 70px;
-  color: var(--Dark-grayish-blue);
-}
-.arrow {
-  background-image: url(images/icon-arrow-down.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  height: 120px;
-}
 a {
   text-transform: uppercase;
   text-decoration: none;
   color: var(--Very-dark-desaturated-blue);
 }
-.content-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 62%;
-  margin: 0 auto;
+/* ==========Swap egg image with context============ */
+.order {
+  order: -1;
+}
+/* ===============learn more underline============ */
+.line-contanier {
+  width: 150px;
+  display: block;
+  position: relative;
+}
+.line {
+  cursor: pointer;
+  border: 5px solid var(--Soft-red);
+  border-radius: 10px 10px 10px 10px;
+  width: 95%;
+  position: absolute;
+  bottom: 0;
+  left: -6px;
+}
+.color-red {
+  border: 5px solid var(--Soft-red);
+}
+.color-red:hover {
+  border: 5px solid var(--red);
 }
 
-.main-grid-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+.color-yellow {
+  border: 5px solid var(--Soft-Yellow);
 }
-.pos {
+.color-yellow:hover {
+  border: 5px solid var(--Yellow);
+}
+/* ================Grapes & Orange============== */
+.grapes {
+  background: url("images/desktop/image-graphic-design.jpg") top center/cover;
   width: 100%;
+  height: 600px;
+}
+.orange {
+  background: url("images/desktop/image-photography.jpg") top center/cover;
+  width: 100%;
+  height: 600px;
+}
+.image-text-box {
   display: flex;
   flex-direction: column;
   justify-content: end;
   align-items: center;
 }
-.order {
-  order: -1;
+.image-text-box .text-container {
+  width: 350px;
+  text-align: center;
+  padding-bottom: 2rem;
+}
+.image-text-box .text-container p {
+  font-size: 16px;
+  margin-top: 1rem;
+  color: var(--Dark-desaturated-cyan-graphic-design-text);
+}
+.image-text-box .text-container h3 {
+  font-size: 1.7rem;
+}
+.orange .text-container h3 {
+  color: var(--Dark-blue-photography-text);
+}
+.grapes .text-container h3 {
+  color: var(--Dark-desaturated-cyan-graphic-design-text);
+}
+/* ===============Testimonial=============== */
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.testimonial-container {
+  margin: 150px 180px;
+  text-align: center;
 }
 article {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.testimonial-container {
-  margin: 150px 180px;
-  text-align: center;
-}
-.testimonial-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+h4 {
+  letter-spacing: 4.5px;
+  font-size: 1rem;
+  margin-bottom: 70px;
+  color: var(--Dark-grayish-blue);
 }
 .testimonial-grid p {
   color: var(--Very-dark-grayish-blue);
@@ -166,10 +274,12 @@ article {
   border-radius: 50%;
 }
 
-.img-grid {
+/* ============Four images=========== */
+.img-collection-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 }
+/* ==============Footer========== */
 .footer-container {
   background-color: rgba(102, 212, 190, 0.854);
   display: flex;
@@ -184,18 +294,6 @@ article {
   filter: invert(27%) sepia(71%) saturate(297%) hue-rotate(116deg)
     brightness(40%) contrast(93%);
 }
-
-.social-media {
-  display: flex;
-  justify-content: center;
-  gap: 1em;
-  width: 100%;
-  margin-bottom: 80px;
-}
-.social-media img {
-  max-width: 20px;
-}
-
 .footer-list-container {
   display: flex;
   width: 100%;
@@ -209,105 +307,24 @@ article {
   color: white;
   cursor: pointer;
 }
-.btn {
-  background-color: #ffffff;
-  font-family: var(--ff-fraunces);
-  padding: 15px 25px;
-  border: none;
-  border-radius: 30px;
+.social-media {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  width: 100%;
+  margin-bottom: 80px;
 }
-.btn:hover {
-  cursor: pointer;
-  background-color: rgba(255, 255, 255, 0.348);
-  color: var(--White);
-}
-.nav-link {
-  font-family: var(--ff-barlow);
-  color: var(--Very-dark-grayish-blue);
-  cursor: pointer;
-}
-.nav-link,
-.btn {
-  font-size: 18px;
-}
-
 .social-media img:hover {
   cursor: pointer;
   filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(306deg)
     brightness(150%) contrast(101%);
 }
-
-.logo {
-  max-width: 170px;
-  object-fit: contain;
-}
-.hamburger {
-  display: none;
-  cursor: pointer;
-}
-.navbar {
-  min-height: 70px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.nav-menu {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 40px;
-}
-.bar {
-  display: block;
-  width: 25px;
-  height: 3px;
-  margin: 5px auto;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-  background-color: white;
+.social-media img {
+  max-width: 20px;
 }
 
-/* ===========!!============= */
+/* ===========Media Query :D ============= */
 
-.box-5 {
-  background: url("images/desktop/image-graphic-design.jpg") top center/cover;
-  width: 100%;
-  height: 600px;
-}
-
-.box-6 {
-  background: url("images/desktop/image-photography.jpg") top center/cover;
-  width: 100%;
-  height: 600px;
-}
-
-.image-text-box {
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
-  align-items: center;
-}
-
-.image-text-box .text-container {
-  width: 350px;
-  text-align: center;
-  padding-bottom: 2rem;
-}
-
-.image-text-box .text-container p {
-  font-size: 16px;
-  margin-top: 1rem;
-  color: var(--Dark-desaturated-cyan-graphic-design-text);
-}
-.image-text-box .text-container h3 {
-  font-size: 1.7rem;
-}
-.box-6 .text-container h3 {
-  color: var(--Dark-blue-photography-text);
-}
-.box-5 .text-container h3 {
-  color: var(--Dark-desaturated-cyan-graphic-design-text);
-}
 @media (max-width: 760px) {
   body {
     text-align: center;
@@ -406,7 +423,13 @@ article {
   }
   .content-container {
     width: 90%;
+    align-items: center;
     margin: 50px auto;
+  }
+  .line {
+    width: 90%;
+
+    left: 6px;
   }
 }
 @media (max-width: 980px) {
